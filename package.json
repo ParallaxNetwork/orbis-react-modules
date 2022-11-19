@@ -7,10 +7,5 @@
       "packages/*",
       "test"
     ]
-  },
-  "scripts": {
-    "dev": "npm --prefix ./test/ run dev",
-    "build": "npm --prefix ./test/ run build",
-    "preview": "npm --prefix ./test/ run preview"
   }
 }
