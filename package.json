@@ -10,7 +10,8 @@
   },
   "scripts": {
     "dev": "npm --prefix ./test/ run dev",
-    "build": "npm package-install build-package test-install build-test",
+    "build": "npm build-package build-test",
+    "install": "npm package-install test-install",
     "package-install": "npm  --prefix ./packages/orbis-react-modules/ npm install",
     "test-install": "npm  --prefix ./test/ npm install",
     "build-package": "npm --prefix ./packages/orbis-react-modules/ run build",
