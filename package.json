@@ -10,7 +10,7 @@
   },
   "scripts": {
     "dev": "npm --prefix ./test/ run dev",
-    "build": "npm --prefix ./test/ run build",
+    "build": "npm --prefix ./test/ run build --output public",
     "preview": "npm --prefix ./test/ run preview"
   }
 }
