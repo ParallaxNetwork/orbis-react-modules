@@ -106,9 +106,7 @@ const Post = ({
     console.log(`deleting ${postClone.stream_id}`)
     setIsDeleted(1)
     await orbis.deletePost(postClone.stream_id)
-    setTimeout(() => {
-      setIsDeleted(2)
-    }, 2000)
+    setIsDeleted(2)
   }
 
   const additionalClasses = useMemo(() => {
