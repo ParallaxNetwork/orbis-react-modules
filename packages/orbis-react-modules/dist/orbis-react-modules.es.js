@@ -1,11 +1,11 @@
-import Qe, { createContext as Mt, useState as x, useContext as Dt, useRef as X, useEffect as Y, useMemo as Xe } from "react";
+import Qe, { createContext as Mt, useState as x, useContext as Dt, useRef as te, useEffect as U, useMemo as Xe } from "react";
 import { Orbis as Zt } from "@orbisclub/orbis-sdk";
-import oe from "react-string-replace";
-import { DateTime as Ee } from "luxon";
+import se from "react-string-replace";
+import { DateTime as Ae } from "luxon";
 import jt from "ethereum-blockies-base64";
-import * as Q from "@radix-ui/react-dropdown-menu";
-import * as K from "@radix-ui/react-alert-dialog";
-var me = { exports: {} }, se = {};
+import * as ee from "@radix-ui/react-dropdown-menu";
+import * as Q from "@radix-ui/react-alert-dialog";
+var he = { exports: {} }, ie = {};
 /**
  * @license React
  * react-jsx-runtime.production.min.js
@@ -18,22 +18,22 @@ var me = { exports: {} }, se = {};
 var Ue;
 function It() {
   if (Ue)
-    return se;
+    return ie;
   Ue = 1;
-  var n = Qe, s = Symbol.for("react.element"), o = Symbol.for("react.fragment"), p = Object.prototype.hasOwnProperty, u = n.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, w = { key: !0, ref: !0, __self: !0, __source: !0 };
-  function E(v, l, c) {
-    var h, i = {}, y = null, O = null;
-    c !== void 0 && (y = "" + c), l.key !== void 0 && (y = "" + l.key), l.ref !== void 0 && (O = l.ref);
-    for (h in l)
-      p.call(l, h) && !w.hasOwnProperty(h) && (i[h] = l[h]);
-    if (v && v.defaultProps)
-      for (h in l = v.defaultProps, l)
-        i[h] === void 0 && (i[h] = l[h]);
-    return { $$typeof: s, type: v, key: y, ref: O, props: i, _owner: u.current };
+  var n = Qe, i = Symbol.for("react.element"), s = Symbol.for("react.fragment"), p = Object.prototype.hasOwnProperty, l = n.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, w = { key: !0, ref: !0, __self: !0, __source: !0 };
+  function _(y, c, u) {
+    var h, a = {}, v = null, k = null;
+    u !== void 0 && (v = "" + u), c.key !== void 0 && (v = "" + c.key), c.ref !== void 0 && (k = c.ref);
+    for (h in c)
+      p.call(c, h) && !w.hasOwnProperty(h) && (a[h] = c[h]);
+    if (y && y.defaultProps)
+      for (h in c = y.defaultProps, c)
+        a[h] === void 0 && (a[h] = c[h]);
+    return { $$typeof: i, type: y, key: v, ref: k, props: a, _owner: l.current };
   }
-  return se.Fragment = o, se.jsx = E, se.jsxs = E, se;
+  return ie.Fragment = s, ie.jsx = _, ie.jsxs = _, ie;
 }
-var ie = {};
+var ce = {};
 /**
  * @license React
  * react-jsx-runtime.development.js
@@ -44,86 +44,86 @@ var ie = {};
  * LICENSE file in the root directory of this source tree.
  */
 var qe;
-function Lt() {
+function Ft() {
   return qe || (qe = 1, process.env.NODE_ENV !== "production" && function() {
-    var n = Qe, s = Symbol.for("react.element"), o = Symbol.for("react.portal"), p = Symbol.for("react.fragment"), u = Symbol.for("react.strict_mode"), w = Symbol.for("react.profiler"), E = Symbol.for("react.provider"), v = Symbol.for("react.context"), l = Symbol.for("react.forward_ref"), c = Symbol.for("react.suspense"), h = Symbol.for("react.suspense_list"), i = Symbol.for("react.memo"), y = Symbol.for("react.lazy"), O = Symbol.for("react.offscreen"), Z = Symbol.iterator, $ = "@@iterator";
-    function V(e) {
+    var n = Qe, i = Symbol.for("react.element"), s = Symbol.for("react.portal"), p = Symbol.for("react.fragment"), l = Symbol.for("react.strict_mode"), w = Symbol.for("react.profiler"), _ = Symbol.for("react.provider"), y = Symbol.for("react.context"), c = Symbol.for("react.forward_ref"), u = Symbol.for("react.suspense"), h = Symbol.for("react.suspense_list"), a = Symbol.for("react.memo"), v = Symbol.for("react.lazy"), k = Symbol.for("react.offscreen"), Z = Symbol.iterator, V = "@@iterator";
+    function I(e) {
       if (e === null || typeof e != "object")
         return null;
-      var r = Z && e[Z] || e[$];
+      var r = Z && e[Z] || e[V];
       return typeof r == "function" ? r : null;
     }
-    var _ = n.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
-    function m(e) {
+    var A = n.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+    function d(e) {
       {
-        for (var r = arguments.length, a = new Array(r > 1 ? r - 1 : 0), d = 1; d < r; d++)
-          a[d - 1] = arguments[d];
-        k("error", e, a);
+        for (var r = arguments.length, o = new Array(r > 1 ? r - 1 : 0), f = 1; f < r; f++)
+          o[f - 1] = arguments[f];
+        P("error", e, o);
       }
     }
-    function k(e, r, a) {
+    function P(e, r, o) {
       {
-        var d = _.ReactDebugCurrentFrame, A = d.getStackAddendum();
-        A !== "" && (r += "%s", a = a.concat([A]));
-        var P = a.map(function(C) {
+        var f = A.ReactDebugCurrentFrame, R = f.getStackAddendum();
+        R !== "" && (r += "%s", o = o.concat([R]));
+        var N = o.map(function(C) {
           return String(C);
         });
-        P.unshift("Warning: " + r), Function.prototype.apply.call(console[e], console, P);
+        N.unshift("Warning: " + r), Function.prototype.apply.call(console[e], console, N);
       }
     }
-    var N = !1, U = !1, L = !1, z = !1, H = !1, B;
-    B = Symbol.for("react.module.reference");
+    var j = !1, X = !1, O = !1, B = !1, q = !1, W;
+    W = Symbol.for("react.module.reference");
+    function z(e) {
+      return !!(typeof e == "string" || typeof e == "function" || e === p || e === w || q || e === l || e === u || e === h || B || e === k || j || X || O || typeof e == "object" && e !== null && (e.$$typeof === v || e.$$typeof === a || e.$$typeof === _ || e.$$typeof === y || e.$$typeof === c || e.$$typeof === W || e.getModuleId !== void 0));
+    }
+    function G(e, r, o) {
+      var f = e.displayName;
+      if (f)
+        return f;
+      var R = r.displayName || r.name || "";
+      return R !== "" ? o + "(" + R + ")" : o;
+    }
     function J(e) {
-      return !!(typeof e == "string" || typeof e == "function" || e === p || e === w || H || e === u || e === c || e === h || z || e === O || N || U || L || typeof e == "object" && e !== null && (e.$$typeof === y || e.$$typeof === i || e.$$typeof === E || e.$$typeof === v || e.$$typeof === l || e.$$typeof === B || e.getModuleId !== void 0));
-    }
-    function ne(e, r, a) {
-      var d = e.displayName;
-      if (d)
-        return d;
-      var A = r.displayName || r.name || "";
-      return A !== "" ? a + "(" + A + ")" : a;
-    }
-    function ee(e) {
       return e.displayName || "Context";
     }
-    function j(e) {
+    function F(e) {
       if (e == null)
         return null;
-      if (typeof e.tag == "number" && m("Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."), typeof e == "function")
+      if (typeof e.tag == "number" && d("Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."), typeof e == "function")
         return e.displayName || e.name || null;
       if (typeof e == "string")
         return e;
       switch (e) {
         case p:
           return "Fragment";
-        case o:
+        case s:
           return "Portal";
         case w:
           return "Profiler";
-        case u:
+        case l:
           return "StrictMode";
-        case c:
+        case u:
           return "Suspense";
         case h:
           return "SuspenseList";
       }
       if (typeof e == "object")
         switch (e.$$typeof) {
-          case v:
+          case y:
             var r = e;
-            return ee(r) + ".Consumer";
-          case E:
-            var a = e;
-            return ee(a._context) + ".Provider";
-          case l:
-            return ne(e, e.render, "ForwardRef");
-          case i:
-            var d = e.displayName || null;
-            return d !== null ? d : j(e.type) || "Memo";
-          case y: {
-            var A = e, P = A._payload, C = A._init;
+            return J(r) + ".Consumer";
+          case _:
+            var o = e;
+            return J(o._context) + ".Provider";
+          case c:
+            return G(e, e.render, "ForwardRef");
+          case a:
+            var f = e.displayName || null;
+            return f !== null ? f : F(e.type) || "Memo";
+          case v: {
+            var R = e, N = R._payload, C = R._init;
             try {
-              return j(C(P));
+              return F(C(N));
             } catch {
               return null;
             }
@@ -131,18 +131,18 @@ function Lt() {
         }
       return null;
     }
-    var R = Object.assign, f = 0, S, D, F, q, ke, Ne, Se;
-    function Te() {
+    var E = Object.assign, m = 0, S, T, $, H, ae, ke, Se;
+    function Oe() {
     }
-    Te.__reactDisabledLog = !0;
+    Oe.__reactDisabledLog = !0;
     function ct() {
       {
-        if (f === 0) {
-          S = console.log, D = console.info, F = console.warn, q = console.error, ke = console.group, Ne = console.groupCollapsed, Se = console.groupEnd;
+        if (m === 0) {
+          S = console.log, T = console.info, $ = console.warn, H = console.error, ae = console.group, ke = console.groupCollapsed, Se = console.groupEnd;
           var e = {
             configurable: !0,
             enumerable: !0,
-            value: Te,
+            value: Oe,
             writable: !0
           };
           Object.defineProperties(console, {
@@ -155,77 +155,77 @@ function Lt() {
             groupEnd: e
           });
         }
-        f++;
+        m++;
       }
     }
     function lt() {
       {
-        if (f--, f === 0) {
+        if (m--, m === 0) {
           var e = {
             configurable: !0,
             enumerable: !0,
             writable: !0
           };
           Object.defineProperties(console, {
-            log: R({}, e, {
+            log: E({}, e, {
               value: S
             }),
-            info: R({}, e, {
-              value: D
+            info: E({}, e, {
+              value: T
             }),
-            warn: R({}, e, {
-              value: F
+            warn: E({}, e, {
+              value: $
             }),
-            error: R({}, e, {
-              value: q
+            error: E({}, e, {
+              value: H
             }),
-            group: R({}, e, {
+            group: E({}, e, {
+              value: ae
+            }),
+            groupCollapsed: E({}, e, {
               value: ke
             }),
-            groupCollapsed: R({}, e, {
-              value: Ne
-            }),
-            groupEnd: R({}, e, {
+            groupEnd: E({}, e, {
               value: Se
             })
           });
         }
-        f < 0 && m("disabledDepth fell below zero. This is a bug in React. Please file an issue.");
+        m < 0 && d("disabledDepth fell below zero. This is a bug in React. Please file an issue.");
       }
     }
-    var ve = _.ReactCurrentDispatcher, _e;
-    function ce(e, r, a) {
+    var _e = A.ReactCurrentDispatcher, ge;
+    function le(e, r, o) {
       {
-        if (_e === void 0)
+        if (ge === void 0)
           try {
             throw Error();
-          } catch (A) {
-            var d = A.stack.trim().match(/\n( *(at )?)/);
-            _e = d && d[1] || "";
+          } catch (R) {
+            var f = R.stack.trim().match(/\n( *(at )?)/);
+            ge = f && f[1] || "";
           }
         return `
-` + _e + e;
+` + ge + e;
       }
     }
-    var ge = !1, le;
+    var be = !1, ue;
     {
       var ut = typeof WeakMap == "function" ? WeakMap : Map;
-      le = new ut();
+      ue = new ut();
     }
-    function Oe(e, r) {
-      if (!e || ge)
+    function Te(e, r) {
+      if (!e || be)
         return "";
       {
-        var a = le.get(e);
-        if (a !== void 0)
-          return a;
+        var o = ue.get(e);
+        if (o !== void 0)
+          return o;
       }
-      var d;
-      ge = !0;
-      var A = Error.prepareStackTrace;
+      var f;
+      be = !0;
+      var R = Error.prepareStackTrace;
       Error.prepareStackTrace = void 0;
-      var P;
-      P = ve.current, ve.current = null, ct();
+      var N;
+      N = _e.current, _e.current = null, ct();
       try {
         if (r) {
           var C = function() {
@@ -238,122 +238,122 @@ function Lt() {
           }), typeof Reflect == "object" && Reflect.construct) {
             try {
               Reflect.construct(C, []);
-            } catch (G) {
-              d = G;
+            } catch (K) {
+              f = K;
             }
             Reflect.construct(e, [], C);
           } else {
             try {
               C.call();
-            } catch (G) {
-              d = G;
+            } catch (K) {
+              f = K;
             }
             e.call(C.prototype);
           }
         } else {
           try {
             throw Error();
-          } catch (G) {
-            d = G;
+          } catch (K) {
+            f = K;
           }
           e();
         }
-      } catch (G) {
-        if (G && d && typeof G.stack == "string") {
-          for (var g = G.stack.split(`
-`), I = d.stack.split(`
-`), T = g.length - 1, M = I.length - 1; T >= 1 && M >= 0 && g[T] !== I[M]; )
-            M--;
-          for (; T >= 1 && M >= 0; T--, M--)
-            if (g[T] !== I[M]) {
-              if (T !== 1 || M !== 1)
+      } catch (K) {
+        if (K && f && typeof K.stack == "string") {
+          for (var g = K.stack.split(`
+`), L = f.stack.split(`
+`), M = g.length - 1, D = L.length - 1; M >= 1 && D >= 0 && g[M] !== L[D]; )
+            D--;
+          for (; M >= 1 && D >= 0; M--, D--)
+            if (g[M] !== L[D]) {
+              if (M !== 1 || D !== 1)
                 do
-                  if (T--, M--, M < 0 || g[T] !== I[M]) {
-                    var W = `
-` + g[T].replace(" at new ", " at ");
-                    return e.displayName && W.includes("<anonymous>") && (W = W.replace("<anonymous>", e.displayName)), typeof e == "function" && le.set(e, W), W;
+                  if (M--, D--, D < 0 || g[M] !== L[D]) {
+                    var Y = `
+` + g[M].replace(" at new ", " at ");
+                    return e.displayName && Y.includes("<anonymous>") && (Y = Y.replace("<anonymous>", e.displayName)), typeof e == "function" && ue.set(e, Y), Y;
                   }
-                while (T >= 1 && M >= 0);
+                while (M >= 1 && D >= 0);
               break;
             }
         }
       } finally {
-        ge = !1, ve.current = P, lt(), Error.prepareStackTrace = A;
+        be = !1, _e.current = N, lt(), Error.prepareStackTrace = R;
       }
-      var re = e ? e.displayName || e.name : "", Ye = re ? ce(re) : "";
-      return typeof e == "function" && le.set(e, Ye), Ye;
+      var ne = e ? e.displayName || e.name : "", Ye = ne ? le(ne) : "";
+      return typeof e == "function" && ue.set(e, Ye), Ye;
     }
-    function dt(e, r, a) {
-      return Oe(e, !1);
+    function dt(e, r, o) {
+      return Te(e, !1);
     }
     function ft(e) {
       var r = e.prototype;
       return !!(r && r.isReactComponent);
     }
-    function ue(e, r, a) {
+    function de(e, r, o) {
       if (e == null)
         return "";
       if (typeof e == "function")
-        return Oe(e, ft(e));
+        return Te(e, ft(e));
       if (typeof e == "string")
-        return ce(e);
+        return le(e);
       switch (e) {
-        case c:
-          return ce("Suspense");
+        case u:
+          return le("Suspense");
         case h:
-          return ce("SuspenseList");
+          return le("SuspenseList");
       }
       if (typeof e == "object")
         switch (e.$$typeof) {
-          case l:
+          case c:
             return dt(e.render);
-          case i:
-            return ue(e.type, r, a);
-          case y: {
-            var d = e, A = d._payload, P = d._init;
+          case a:
+            return de(e.type, r, o);
+          case v: {
+            var f = e, R = f._payload, N = f._init;
             try {
-              return ue(P(A), r, a);
+              return de(N(R), r, o);
             } catch {
             }
           }
         }
       return "";
     }
-    var de = Object.prototype.hasOwnProperty, Me = {}, De = _.ReactDebugCurrentFrame;
-    function fe(e) {
+    var fe = Object.prototype.hasOwnProperty, Me = {}, De = A.ReactDebugCurrentFrame;
+    function me(e) {
       if (e) {
-        var r = e._owner, a = ue(e.type, e._source, r ? r.type : null);
-        De.setExtraStackFrame(a);
+        var r = e._owner, o = de(e.type, e._source, r ? r.type : null);
+        De.setExtraStackFrame(o);
       } else
         De.setExtraStackFrame(null);
     }
-    function mt(e, r, a, d, A) {
+    function mt(e, r, o, f, R) {
       {
-        var P = Function.call.bind(de);
+        var N = Function.call.bind(fe);
         for (var C in e)
-          if (P(e, C)) {
+          if (N(e, C)) {
             var g = void 0;
             try {
               if (typeof e[C] != "function") {
-                var I = Error((d || "React class") + ": " + a + " type `" + C + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof e[C] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
-                throw I.name = "Invariant Violation", I;
+                var L = Error((f || "React class") + ": " + o + " type `" + C + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof e[C] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
+                throw L.name = "Invariant Violation", L;
               }
-              g = e[C](r, C, d, a, null, "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED");
-            } catch (T) {
-              g = T;
+              g = e[C](r, C, f, o, null, "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED");
+            } catch (M) {
+              g = M;
             }
-            g && !(g instanceof Error) && (fe(A), m("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", d || "React class", a, C, typeof g), fe(null)), g instanceof Error && !(g.message in Me) && (Me[g.message] = !0, fe(A), m("Failed %s type: %s", a, g.message), fe(null));
+            g && !(g instanceof Error) && (me(R), d("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", f || "React class", o, C, typeof g), me(null)), g instanceof Error && !(g.message in Me) && (Me[g.message] = !0, me(R), d("Failed %s type: %s", o, g.message), me(null));
           }
       }
     }
     var ht = Array.isArray;
-    function be(e) {
+    function we(e) {
       return ht(e);
     }
     function pt(e) {
       {
-        var r = typeof Symbol == "function" && Symbol.toStringTag, a = r && e[Symbol.toStringTag] || e.constructor.name || "Object";
-        return a;
+        var r = typeof Symbol == "function" && Symbol.toStringTag, o = r && e[Symbol.toStringTag] || e.constructor.name || "Object";
+        return o;
       }
     }
     function vt(e) {
@@ -368,17 +368,17 @@ function Lt() {
     }
     function je(e) {
       if (vt(e))
-        return m("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", pt(e)), Ze(e);
+        return d("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", pt(e)), Ze(e);
     }
-    var ae = _.ReactCurrentOwner, _t = {
+    var oe = A.ReactCurrentOwner, _t = {
       key: !0,
       ref: !0,
       __self: !0,
       __source: !0
-    }, Ie, Le, we;
-    we = {};
+    }, Ie, Fe, Ce;
+    Ce = {};
     function gt(e) {
-      if (de.call(e, "ref")) {
+      if (fe.call(e, "ref")) {
         var r = Object.getOwnPropertyDescriptor(e, "ref").get;
         if (r && r.isReactWarning)
           return !1;
@@ -386,7 +386,7 @@ function Lt() {
       return e.ref !== void 0;
     }
     function bt(e) {
-      if (de.call(e, "key")) {
+      if (fe.call(e, "key")) {
         var r = Object.getOwnPropertyDescriptor(e, "key").get;
         if (r && r.isReactWarning)
           return !1;
@@ -394,41 +394,41 @@ function Lt() {
       return e.key !== void 0;
     }
     function wt(e, r) {
-      if (typeof e.ref == "string" && ae.current && r && ae.current.stateNode !== r) {
-        var a = j(ae.current.type);
-        we[a] || (m('Component "%s" contains the string ref "%s". Support for string refs will be removed in a future major release. This case cannot be automatically converted to an arrow function. We ask you to manually fix this case by using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', j(ae.current.type), e.ref), we[a] = !0);
+      if (typeof e.ref == "string" && oe.current && r && oe.current.stateNode !== r) {
+        var o = F(oe.current.type);
+        Ce[o] || (d('Component "%s" contains the string ref "%s". Support for string refs will be removed in a future major release. This case cannot be automatically converted to an arrow function. We ask you to manually fix this case by using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', F(oe.current.type), e.ref), Ce[o] = !0);
       }
     }
     function Ct(e, r) {
       {
-        var a = function() {
-          Ie || (Ie = !0, m("%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", r));
+        var o = function() {
+          Ie || (Ie = !0, d("%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", r));
         };
-        a.isReactWarning = !0, Object.defineProperty(e, "key", {
-          get: a,
+        o.isReactWarning = !0, Object.defineProperty(e, "key", {
+          get: o,
           configurable: !0
         });
       }
     }
     function yt(e, r) {
       {
-        var a = function() {
-          Le || (Le = !0, m("%s: `ref` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", r));
+        var o = function() {
+          Fe || (Fe = !0, d("%s: `ref` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", r));
         };
-        a.isReactWarning = !0, Object.defineProperty(e, "ref", {
-          get: a,
+        o.isReactWarning = !0, Object.defineProperty(e, "ref", {
+          get: o,
           configurable: !0
         });
       }
     }
-    var Rt = function(e, r, a, d, A, P, C) {
+    var Et = function(e, r, o, f, R, N, C) {
       var g = {
-        $$typeof: s,
+        $$typeof: i,
         type: e,
         key: r,
-        ref: a,
+        ref: o,
         props: C,
-        _owner: P
+        _owner: N
       };
       return g._store = {}, Object.defineProperty(g._store, "validated", {
         configurable: !1,
@@ -439,49 +439,49 @@ function Lt() {
         configurable: !1,
         enumerable: !1,
         writable: !1,
-        value: d
+        value: f
       }), Object.defineProperty(g, "_source", {
         configurable: !1,
         enumerable: !1,
         writable: !1,
-        value: A
+        value: R
       }), Object.freeze && (Object.freeze(g.props), Object.freeze(g)), g;
     };
-    function Et(e, r, a, d, A) {
+    function Rt(e, r, o, f, R) {
       {
-        var P, C = {}, g = null, I = null;
-        a !== void 0 && (je(a), g = "" + a), bt(r) && (je(r.key), g = "" + r.key), gt(r) && (I = r.ref, wt(r, A));
-        for (P in r)
-          de.call(r, P) && !_t.hasOwnProperty(P) && (C[P] = r[P]);
+        var N, C = {}, g = null, L = null;
+        o !== void 0 && (je(o), g = "" + o), bt(r) && (je(r.key), g = "" + r.key), gt(r) && (L = r.ref, wt(r, R));
+        for (N in r)
+          fe.call(r, N) && !_t.hasOwnProperty(N) && (C[N] = r[N]);
         if (e && e.defaultProps) {
-          var T = e.defaultProps;
-          for (P in T)
-            C[P] === void 0 && (C[P] = T[P]);
+          var M = e.defaultProps;
+          for (N in M)
+            C[N] === void 0 && (C[N] = M[N]);
         }
-        if (g || I) {
-          var M = typeof e == "function" ? e.displayName || e.name || "Unknown" : e;
-          g && Ct(C, M), I && yt(C, M);
+        if (g || L) {
+          var D = typeof e == "function" ? e.displayName || e.name || "Unknown" : e;
+          g && Ct(C, D), L && yt(C, D);
         }
-        return Rt(e, g, I, A, d, ae.current, C);
+        return Et(e, g, L, R, f, oe.current, C);
       }
     }
-    var Ce = _.ReactCurrentOwner, Fe = _.ReactDebugCurrentFrame;
-    function te(e) {
+    var ye = A.ReactCurrentOwner, Le = A.ReactDebugCurrentFrame;
+    function re(e) {
       if (e) {
-        var r = e._owner, a = ue(e.type, e._source, r ? r.type : null);
-        Fe.setExtraStackFrame(a);
+        var r = e._owner, o = de(e.type, e._source, r ? r.type : null);
+        Le.setExtraStackFrame(o);
       } else
-        Fe.setExtraStackFrame(null);
+        Le.setExtraStackFrame(null);
     }
-    var ye;
-    ye = !1;
+    var Ee;
+    Ee = !1;
     function Re(e) {
-      return typeof e == "object" && e !== null && e.$$typeof === s;
+      return typeof e == "object" && e !== null && e.$$typeof === i;
     }
     function $e() {
       {
-        if (Ce.current) {
-          var e = j(Ce.current.type);
+        if (ye.current) {
+          var e = F(ye.current.type);
           if (e)
             return `
 
@@ -493,10 +493,10 @@ Check the render method of \`` + e + "`.";
     function At(e) {
       {
         if (e !== void 0) {
-          var r = e.fileName.replace(/^.*[\\\/]/, ""), a = e.lineNumber;
+          var r = e.fileName.replace(/^.*[\\\/]/, ""), o = e.lineNumber;
           return `
 
-Check your code at ` + r + ":" + a + ".";
+Check your code at ` + r + ":" + o + ".";
         }
         return "";
       }
@@ -506,10 +506,10 @@ Check your code at ` + r + ":" + a + ".";
       {
         var r = $e();
         if (!r) {
-          var a = typeof e == "string" ? e : e.displayName || e.name;
-          a && (r = `
+          var o = typeof e == "string" ? e : e.displayName || e.name;
+          o && (r = `
 
-Check the top-level render call using <` + a + ">.");
+Check the top-level render call using <` + o + ">.");
         }
         return r;
       }
@@ -519,29 +519,29 @@ Check the top-level render call using <` + a + ">.");
         if (!e._store || e._store.validated || e.key != null)
           return;
         e._store.validated = !0;
-        var a = xt(r);
-        if (Ve[a])
+        var o = xt(r);
+        if (Ve[o])
           return;
-        Ve[a] = !0;
-        var d = "";
-        e && e._owner && e._owner !== Ce.current && (d = " It was passed a child from " + j(e._owner.type) + "."), te(e), m('Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.', a, d), te(null);
+        Ve[o] = !0;
+        var f = "";
+        e && e._owner && e._owner !== ye.current && (f = " It was passed a child from " + F(e._owner.type) + "."), re(e), d('Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.', o, f), re(null);
       }
     }
     function He(e, r) {
       {
         if (typeof e != "object")
           return;
-        if (be(e))
-          for (var a = 0; a < e.length; a++) {
-            var d = e[a];
-            Re(d) && Be(d, r);
+        if (we(e))
+          for (var o = 0; o < e.length; o++) {
+            var f = e[o];
+            Re(f) && Be(f, r);
           }
         else if (Re(e))
           e._store && (e._store.validated = !0);
         else if (e) {
-          var A = V(e);
-          if (typeof A == "function" && A !== e.entries)
-            for (var P = A.call(e), C; !(C = P.next()).done; )
+          var R = I(e);
+          if (typeof R == "function" && R !== e.entries)
+            for (var N = R.call(e), C; !(C = N.next()).done; )
               Re(C.value) && Be(C.value, r);
         }
       }
@@ -551,80 +551,80 @@ Check the top-level render call using <` + a + ">.");
         var r = e.type;
         if (r == null || typeof r == "string")
           return;
-        var a;
+        var o;
         if (typeof r == "function")
-          a = r.propTypes;
-        else if (typeof r == "object" && (r.$$typeof === l || r.$$typeof === i))
-          a = r.propTypes;
+          o = r.propTypes;
+        else if (typeof r == "object" && (r.$$typeof === c || r.$$typeof === a))
+          o = r.propTypes;
         else
           return;
-        if (a) {
-          var d = j(r);
-          mt(a, e.props, "prop", d, e);
-        } else if (r.PropTypes !== void 0 && !ye) {
-          ye = !0;
-          var A = j(r);
-          m("Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?", A || "Unknown");
+        if (o) {
+          var f = F(r);
+          mt(o, e.props, "prop", f, e);
+        } else if (r.PropTypes !== void 0 && !Ee) {
+          Ee = !0;
+          var R = F(r);
+          d("Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?", R || "Unknown");
         }
-        typeof r.getDefaultProps == "function" && !r.getDefaultProps.isReactClassApproved && m("getDefaultProps is only used on classic React.createClass definitions. Use a static property named `defaultProps` instead.");
+        typeof r.getDefaultProps == "function" && !r.getDefaultProps.isReactClassApproved && d("getDefaultProps is only used on classic React.createClass definitions. Use a static property named `defaultProps` instead.");
       }
     }
-    function kt(e) {
+    function Nt(e) {
       {
-        for (var r = Object.keys(e.props), a = 0; a < r.length; a++) {
-          var d = r[a];
-          if (d !== "children" && d !== "key") {
-            te(e), m("Invalid prop `%s` supplied to `React.Fragment`. React.Fragment can only have `key` and `children` props.", d), te(null);
+        for (var r = Object.keys(e.props), o = 0; o < r.length; o++) {
+          var f = r[o];
+          if (f !== "children" && f !== "key") {
+            re(e), d("Invalid prop `%s` supplied to `React.Fragment`. React.Fragment can only have `key` and `children` props.", f), re(null);
             break;
           }
         }
-        e.ref !== null && (te(e), m("Invalid attribute `ref` supplied to `React.Fragment`."), te(null));
+        e.ref !== null && (re(e), d("Invalid attribute `ref` supplied to `React.Fragment`."), re(null));
       }
     }
-    function We(e, r, a, d, A, P) {
+    function We(e, r, o, f, R, N) {
       {
-        var C = J(e);
+        var C = z(e);
         if (!C) {
           var g = "";
           (e === void 0 || typeof e == "object" && e !== null && Object.keys(e).length === 0) && (g += " You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.");
-          var I = At(A);
-          I ? g += I : g += $e();
-          var T;
-          e === null ? T = "null" : be(e) ? T = "array" : e !== void 0 && e.$$typeof === s ? (T = "<" + (j(e.type) || "Unknown") + " />", g = " Did you accidentally export a JSX literal instead of a component?") : T = typeof e, m("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", T, g);
+          var L = At(R);
+          L ? g += L : g += $e();
+          var M;
+          e === null ? M = "null" : we(e) ? M = "array" : e !== void 0 && e.$$typeof === i ? (M = "<" + (F(e.type) || "Unknown") + " />", g = " Did you accidentally export a JSX literal instead of a component?") : M = typeof e, d("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", M, g);
         }
-        var M = Et(e, r, a, A, P);
-        if (M == null)
-          return M;
+        var D = Rt(e, r, o, R, N);
+        if (D == null)
+          return D;
         if (C) {
-          var W = r.children;
-          if (W !== void 0)
-            if (d)
-              if (be(W)) {
-                for (var re = 0; re < W.length; re++)
-                  He(W[re], e);
-                Object.freeze && Object.freeze(W);
+          var Y = r.children;
+          if (Y !== void 0)
+            if (f)
+              if (we(Y)) {
+                for (var ne = 0; ne < Y.length; ne++)
+                  He(Y[ne], e);
+                Object.freeze && Object.freeze(Y);
               } else
-                m("React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead.");
+                d("React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead.");
             else
-              He(W, e);
+              He(Y, e);
         }
-        return e === p ? kt(M) : Pt(M), M;
+        return e === p ? Nt(D) : Pt(D), D;
       }
     }
-    function Nt(e, r, a) {
-      return We(e, r, a, !0);
+    function kt(e, r, o) {
+      return We(e, r, o, !0);
     }
-    function St(e, r, a) {
-      return We(e, r, a, !1);
+    function St(e, r, o) {
+      return We(e, r, o, !1);
     }
-    var Tt = St, Ot = Nt;
-    ie.Fragment = p, ie.jsx = Tt, ie.jsxs = Ot;
-  }()), ie;
+    var Ot = St, Tt = kt;
+    ce.Fragment = p, ce.jsx = Ot, ce.jsxs = Tt;
+  }()), ce;
 }
 (function(n) {
-  process.env.NODE_ENV === "production" ? n.exports = It() : n.exports = Lt();
-})(me);
-const Ae = me.exports.Fragment, t = me.exports.jsx, b = me.exports.jsxs, ze = () => /* @__PURE__ */ t("svg", {
+  process.env.NODE_ENV === "production" ? n.exports = It() : n.exports = Ft();
+})(he);
+const xe = he.exports.Fragment, t = he.exports.jsx, b = he.exports.jsxs, ze = () => /* @__PURE__ */ t("svg", {
   stroke: "currentColor",
   fill: "currentColor",
   xmlns: "http://www.w3.org/2000/svg",
@@ -652,7 +652,7 @@ const Ae = me.exports.Fragment, t = me.exports.jsx, b = me.exports.jsxs, ze = ()
   }), /* @__PURE__ */ t("path", {
     d: "M49.92,43.94a2,2,0,0,1-2.05,2,2,2,0,0,1-2-2.12,1.91,1.91,0,0,1,2.09-2.06A1.94,1.94,0,0,1,49.92,43.94Z"
   })]
-}), Ft = () => /* @__PURE__ */ t("svg", {
+}), Lt = () => /* @__PURE__ */ t("svg", {
   stroke: "currentColor",
   fill: "currentColor",
   xmlns: "http://www.w3.org/2000/svg",
@@ -712,81 +712,81 @@ const Ae = me.exports.Fragment, t = me.exports.jsx, b = me.exports.jsxs, ze = ()
   }), /* @__PURE__ */ t("path", {
     d: "M43,34.92l-4.59-4.85a8.72,8.72,0,0,0-13-11.58,8.73,8.73,0,0,0,5.76,15.06h.25a8.69,8.69,0,0,0,4.86-1.48l4.59,4.85a1.44,1.44,0,0,0,1,.45A1.44,1.44,0,0,0,43,34.92ZM31.31,30.65A5.83,5.83,0,0,1,31.47,19h.16a5.83,5.83,0,0,1-.32,11.65Z"
   })]
-}), xe = (n) => {
+}), Pe = (n) => {
   if (!n)
     return "-";
-  const s = n.substring(0, 5), o = n.substring(n.length - 5);
-  return s + "-" + o;
-}, he = (n, s = !1) => {
+  const i = n.substring(0, 5), s = n.substring(n.length - 5);
+  return i + "-" + s;
+}, pe = (n, i = !1) => {
   if (!n)
     return "";
-  const o = n.split(":");
-  return s ? xe(o[4]) : o[4];
-}, et = (n) => n?.profile?.username || xe(he(n?.did)), tt = (n) => n?.metadata?.ensName || xe(he(n?.did)), rt = /\B@[a-z0-9_.⍙-]+/gi, Wt = (n) => {
+  const s = n.split(":");
+  return i ? Pe(s[4]) : s[4];
+}, et = (n) => n?.profile?.username || Pe(pe(n?.did)), tt = (n) => n?.metadata?.ensName || Pe(pe(n?.did)), rt = /\B@[a-z0-9_.⍙-]+/gi, Wt = (n) => {
   if (!n)
     return "";
   let {
-    body: s
+    body: i
   } = n;
   const {
-    mentions: o
+    mentions: s
   } = n, p = n.body.toString().match(rt);
-  p && o && Array.isArray(o) && p.forEach((w) => {
-    o.find((v) => v.username === w) !== void 0 && (s = s.replace(w, `<span class="highlighted" contenteditable="false">${w}</span>`));
+  p && s && Array.isArray(s) && p.forEach((w) => {
+    s.find((y) => y.username === w) !== void 0 && (i = i.replace(w, `<span class="highlighted" contenteditable="false">${w}</span>`));
   });
-  const u = new RegExp(String.fromCharCode(160), "g");
-  return s = s.replace(u, " "), s;
-}, Yt = (n, s = !1, o = 280, p = "https://app.orbis.club/profile/") => {
+  const l = new RegExp(String.fromCharCode(160), "g");
+  return i = i.replace(l, " "), i;
+}, Yt = (n, i = !1, s = 0, p = "https://app.orbis.club/profile/") => {
   if (!n || !n.body)
     return null;
-  let u = n.body;
-  if (s && u.length > o)
-    return u = u.substring(0, o), u + "...";
-  u = oe(u, "<br>", function(l, c) {
-    return /* @__PURE__ */ t("br", {}, l + c);
-  }), u = oe(u, `
-`, function(l, c) {
-    return /* @__PURE__ */ t("br", {}, l + c);
-  }), u = oe(u, /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/g, function(l, c) {
+  let l = n.body;
+  if (s > 0 && i && l.length > s)
+    return l = l.substring(0, s), l + "...";
+  l = se(l, "<br>", function(c, u) {
+    return /* @__PURE__ */ t("br", {}, c + u);
+  }), l = se(l, `
+`, function(c, u) {
+    return /* @__PURE__ */ t("br", {}, c + u);
+  }), l = se(l, /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/g, function(c, u) {
     return /* @__PURE__ */ t("a", {
-      href: l,
+      href: c,
       rel: "noreferrer",
       target: "_blank",
-      title: l,
+      title: c,
       className: "highlighted",
-      children: l
-    }, l + c);
+      children: c
+    }, c + u);
   });
   const {
     mentions: w
-  } = n, E = n.body.toString().match(rt);
-  E && w && Array.isArray(w) && E.forEach((l) => {
-    const c = w.find((h) => h.username === l);
-    c !== void 0 && (u = oe(u, l, (h, i) => c.did ? /* @__PURE__ */ t("a", {
-      href: `${p}${c.did}`,
+  } = n, _ = n.body.toString().match(rt);
+  _ && w && Array.isArray(w) && _.forEach((c) => {
+    const u = w.find((h) => h.username === c);
+    u !== void 0 && (l = se(l, c, (h, a) => u.did ? /* @__PURE__ */ t("a", {
+      href: `${p}${u.did}`,
       target: "_blank",
       rel: "noreferrer",
-      children: c.username
-    }, h + i) : /* @__PURE__ */ t("span", {
+      children: u.username
+    }, h + a) : /* @__PURE__ */ t("span", {
       className: "highlighted",
-      children: c.username
-    }, h + i)));
+      children: u.username
+    }, h + a)));
   });
-  const v = new RegExp(String.fromCharCode(160), "g");
-  return u = oe(u, v, function(l) {
-    return " " + l;
-  }), u;
+  const y = new RegExp(String.fromCharCode(160), "g");
+  return l = se(l, y, function(c) {
+    return " " + c;
+  }), l;
 }, Je = (n) => {
-  const s = Ee.now(), o = Ee.fromSeconds(n), p = s.diff(o, ["days"]);
-  let u = o.toRelative();
-  return p.get("days") > 7 && (u = o.toLocaleString(Ee.DATETIME_MED)), u;
-}, Ut = (n) => new Promise((s) => setTimeout(s, n)), qt = (n, s) => {
-  let o;
-  return (...p) => new Promise((u) => {
-    o && clearTimeout(o), o = setTimeout(() => u(n(...p)), s);
+  const i = Ae.now(), s = Ae.fromSeconds(n), p = i.diff(s, ["days"]);
+  let l = s.toRelative();
+  return p.get("days") > 7 && (l = s.toLocaleString(Ae.DATETIME_MED)), l;
+}, Ut = (n) => new Promise((i) => setTimeout(i, n)), qt = (n, i) => {
+  let s;
+  return (...p) => new Promise((l) => {
+    s && clearTimeout(s), s = setTimeout(() => l(n(...p)), i);
   });
 }, zt = {
-  like: /* @__PURE__ */ t(Ft, {}),
+  like: /* @__PURE__ */ t(Lt, {}),
   likeActive: /* @__PURE__ */ t($t, {}),
   haha: /* @__PURE__ */ t(Ge, {}),
   hahaActive: /* @__PURE__ */ t(Ge, {}),
@@ -797,143 +797,145 @@ const Ae = me.exports.Fragment, t = me.exports.jsx, b = me.exports.jsxs, ze = ()
   comment: /* @__PURE__ */ t(Vt, {})
 }, nt = Mt({}), ir = ({
   children: n,
-  customIcons: s = null,
-  options: o = {},
+  customIcons: i = null,
+  options: s = {},
   profileUrl: p = "https://app.orbis.club/profile/",
-  showPoweredByOrbis: u = !1
+  showPoweredByOrbis: l = !1,
+  showCerscanProof: w = !1
 }) => {
-  const w = new Zt(o), E = s || zt, [v, l] = x(!1), [c, h] = x(null), [i, y] = x(!1), O = async () => {
-    console.log("connecting", v);
-    const _ = await w.connect_v2({
-      provider: v,
+  const _ = new Zt(s), y = i || zt, [c, u] = x(!1), [h, a] = x(null), [v, k] = x(!1), Z = async () => {
+    console.log("connecting", c);
+    const d = await _.connect_v2({
+      provider: c,
       chain: "ethereum"
     });
-    if (console.log(_), _.status !== 200)
-      await Ut(2e3), await O();
+    if (console.log(d), d.status !== 200)
+      await Ut(2e3), await Z();
     else {
       const {
-        data: m
-      } = await w.getProfile(_.did);
-      h(m);
+        data: P
+      } = await _.getProfile(d.did);
+      a(P);
     }
-  }, Z = () => {
-    w.logout().status === 200 && h(null);
-  }, $ = async () => {
-    const _ = await w.connectLit(v);
-    return y(_.status === 200), _;
-  }, V = async (_ = !1) => {
-    const m = await w.isConnected();
-    if (m.status === 200) {
+  }, V = () => {
+    _.logout().status === 200 && a(null);
+  }, I = async () => {
+    const d = await _.connectLit(c);
+    return k(d.status === 200), d;
+  }, A = async (d = !1) => {
+    const P = await _.isConnected();
+    if (P.status === 200) {
       const {
-        data: k
-      } = await w.getProfile(m.did);
-      y(m?.details?.hasLit), h(k);
+        data: j
+      } = await _.getProfile(P.did);
+      k(P?.details?.hasLit), a(j);
     } else
-      _ && await O();
+      d && await Z();
   };
   return /* @__PURE__ */ t(nt.Provider, {
     value: {
-      orbis: w,
-      icons: E,
-      provider: v,
-      profile: c,
+      orbis: _,
+      icons: y,
+      provider: c,
+      profile: h,
       profileUrl: p,
-      hasLit: i,
-      showPoweredByOrbis: u,
-      setProvider: l,
-      connectOrbis: O,
-      connectLit: $,
-      checkOrbisConnection: V,
-      disconnectOrbis: Z
+      hasLit: v,
+      showPoweredByOrbis: l,
+      showCerscanProof: w,
+      setProvider: u,
+      connectOrbis: Z,
+      connectLit: I,
+      checkOrbisConnection: A,
+      disconnectOrbis: V
     },
     children: n
   });
-}, pe = () => Dt(nt), at = (n, s) => {
-  const o = X(() => {
+}, ve = () => Dt(nt), at = (n, i) => {
+  const s = te(() => {
   });
-  Y(() => {
-    o.current = n;
-  }), Y(() => {
-    if (s !== null) {
-      const p = setInterval(() => o.current(), s || 0);
+  U(() => {
+    s.current = n;
+  }), U(() => {
+    if (i !== null) {
+      const p = setInterval(() => s.current(), i || 0);
       return () => clearInterval(p);
     }
-  }, [s]);
+  }, [i]);
 }, ot = ({
   details: n
 }) => {
-  const s = he(n?.did) || "";
+  const i = pe(n?.did) || "";
   return /* @__PURE__ */ t("div", {
     className: "avatar",
     children: /* @__PURE__ */ t("img", {
-      src: n?.profile?.pfp || jt(s),
+      src: n?.profile?.pfp || jt(i),
       className: "w-full h-full object-cover object-center"
     })
   });
-}, Pe = ({
+}, Ne = ({
   context: n,
-  editPost: s,
-  replyTo: o,
+  editPost: i,
+  replyTo: s,
   placeholder: p = "Share your post here...",
-  enterToSend: u = !0,
+  enterToShare: l = !0,
   popoverPosition: w = "top",
-  cancelReplyTo: E,
-  cancelEdit: v,
-  callback: l
+  cancelReplyTo: _,
+  cancelEdit: y,
+  callback: c
 }) => {
   const {
-    orbis: c,
+    orbis: u,
     profile: h,
-    connectOrbis: i
-  } = pe(), y = X(null), [O, Z] = x(0), [$, V] = x(null), [_, m] = x(!1), [k, N] = x(""), [U, L] = x([]), [z, H] = x([]), B = () => {
-    const f = document.getSelection();
-    f && (Z(f.focusOffset), V(f.focusNode));
-  }, J = () => {
-    if (!y.current)
+    connectOrbis: a
+  } = ve(), v = te(null), [k, Z] = x(0), [V, I] = x(null), [A, d] = x(!1), [P, j] = x(""), [X, O] = x([]), [B, q] = x([]), W = () => {
+    const m = document.getSelection();
+    m && (Z(m.focusOffset), I(m.focusNode));
+  }, z = () => {
+    if (!v.current)
       return;
-    y.current.focus();
-    const f = document.getSelection();
-    f && f.collapse($, O);
-  }, ne = qt(async () => {
-    m(!0), L([]);
+    v.current.focus();
+    const m = document.getSelection();
+    m && m.collapse(V, k);
+  }, G = qt(async () => {
+    d(!0), O([]);
     const {
-      data: f,
+      data: m,
       error: S
-    } = await c.getProfilesByUsername(k);
-    f ? L(f) : console.log(S), m(!1);
-  }, 1e3), ee = (f) => {
-    J();
-    const S = f?.details?.profile?.username?.trim();
-    z?.find((q) => S === q?.username) || H([...z, {
+    } = await u.getProfilesByUsername(P);
+    m ? O(m) : console.log(S), d(!1);
+  }, 1e3), J = (m) => {
+    z();
+    const S = m?.details?.profile?.username?.trim();
+    B?.find((H) => S === H?.username) || q([...B, {
       username: "@" + S,
-      did: f.did
+      did: m.did
     }]);
-    const F = '<span href="/profile/' + f.did + '" class="text-lime-700" contenteditable="false" data-did="' + f.did + '">@' + S + "</span><span> </span>";
-    for (let q = 0; q < k.length + 1; q++)
-      document.execCommand("delete", !1, ""), q == k.length && document.execCommand("insertHTML", !1, F);
+    const $ = '<span href="/profile/' + m.did + '" class="text-lime-700" contenteditable="false" data-did="' + m.did + '">@' + S + "</span><span> </span>";
+    for (let H = 0; H < P.length + 1; H++)
+      document.execCommand("delete", !1, ""), H == P.length && document.execCommand("insertHTML", !1, $);
     setTimeout(() => {
-      N(""), y.current.focus(), y.current.innerHTML.replace(/&nbsp;$/, " ");
+      j(""), v.current.focus(), v.current.innerHTML.replace(/&nbsp;$/, " ");
     }, 100);
-  }, j = async () => {
-    if (!c || !h)
+  }, F = async () => {
+    if (!u || !h)
       return !1;
-    const f = y.current.innerText, S = z.filter((D) => f.includes(D.username));
-    if (s) {
-      const D = {
-        ...s.content,
-        body: f,
+    const m = v.current.innerText, S = B.filter((T) => m.includes(T.username));
+    if (i) {
+      const T = {
+        ...i.content,
+        body: m,
         mentions: S
       };
-      l && l(D);
+      c && c(T), await u.editPost(i.stream_id, T);
     } else {
-      const D = {
-        body: f,
+      const T = {
+        body: m,
         context: n,
-        master: o ? o.master || o.stream_id : void 0,
-        reply_to: o ? o.stream_id : void 0,
-        mentions: S || void 0
-      }, F = Math.floor(Date.now() / 1e3), q = {
-        content: D,
+        master: s ? s.master || s.stream_id : null,
+        reply_to: s ? s.stream_id : null,
+        mentions: S || []
+      }, $ = Math.floor(Date.now() / 1e3), H = {
+        content: T,
         context: n,
         creator: h.did,
         creator_details: {
@@ -941,187 +943,189 @@ const Ae = me.exports.Fragment, t = me.exports.jsx, b = me.exports.jsxs, ze = ()
           profile: h.details?.profile,
           metadata: h.details?.metadata
         },
-        stream_id: "new_post-" + F,
-        timestamp: F,
-        master: o ? o.master || o.stream_id : null,
-        reply_to: o ? o.stream_id : null,
-        reply_to_creator_details: o ? o.creator_details : null,
-        reply_to_details: o ? o.content : null,
+        stream_id: "new_post-" + $,
+        timestamp: $,
+        master: s ? s.master || s.stream_id : null,
+        reply_to: s ? s.stream_id : null,
+        reply_to_creator_details: s ? s.creator_details : null,
+        reply_to_details: s ? s.content : null,
         count_commits: 1,
         count_likes: 0,
         count_haha: 0,
         count_downvotes: 0,
         count_replies: 0,
-        type: o ? "reply" : null
+        type: s ? "reply" : null
       };
-      console.log(q), l && l(q), y.current.innerText = "";
+      console.log(H), c && c(H), v.current.innerText = "";
+      const ae = await u.createPost(T);
+      ae.status === 200 && (H.stream_id = ae.doc, c && c(H));
     }
-  }, R = (f) => {
-    !f.key || u && f.key === "Enter" && !f.shiftKey && (f.preventDefault(), j());
+  }, E = (m) => {
+    !m.key || l && m.key === "Enter" && !m.shiftKey && (m.preventDefault(), F());
   };
-  return Y(() => {
-    if (!y.current)
+  return U(() => {
+    if (!v.current)
       return;
-    y.current.innerText || (N(""), m(!1), L([]));
+    v.current.innerText || (j(""), d(!1), O([]));
     let S = "";
-    for (let D = O; D > 0; D--) {
-      const F = $?.textContent?.substring(D - 1, D)?.trim();
-      if (S = F + S, !F) {
-        N(""), m(!1), L([]);
+    for (let T = k; T > 0; T--) {
+      const $ = V?.textContent?.substring(T - 1, T)?.trim();
+      if (S = $ + S, !$) {
+        j(""), d(!1), O([]);
         return;
       }
-      if (F === "@") {
-        N(S.replace("@", ""));
+      if ($ === "@") {
+        j(S.replace("@", ""));
         return;
       }
-      m(!1), N("");
+      d(!1), j("");
     }
-  }, [O, $]), Y(() => {
-    k ? ne() : (m(!1), L([]));
-  }, [k]), Y(() => {
-    o && y.current.focus();
-  }, [o]), Y(() => {
-    if (s) {
+  }, [k, V]), U(() => {
+    P ? G() : (d(!1), O([]));
+  }, [P]), U(() => {
+    s && v.current.focus();
+  }, [s]), U(() => {
+    if (i) {
       let {
-        body: f
-      } = s.content;
+        body: m
+      } = i.content;
       const {
         mentions: S
-      } = s.content;
-      S?.length && (H(S), f = Wt(s.content)), y.current.innerHTML = f, setTimeout(() => {
-        if (y.current.focus(), typeof window.getSelection < "u" && typeof document.createRange < "u") {
-          const D = document.createRange();
-          D.selectNodeContents(y.current), D.collapse(!1);
-          const F = window.getSelection();
-          F?.removeAllRanges(), F?.addRange(D);
+      } = i.content;
+      S?.length && (q(S), m = Wt(i.content)), v.current.innerHTML = m, setTimeout(() => {
+        if (v.current.focus(), typeof window.getSelection < "u" && typeof document.createRange < "u") {
+          const T = document.createRange();
+          T.selectNodeContents(v.current), T.collapse(!1);
+          const $ = window.getSelection();
+          $?.removeAllRanges(), $?.addRange(T);
         }
       }, 100);
     }
-  }, [s]), h ? /* @__PURE__ */ b("div", {
+  }, [i]), h ? /* @__PURE__ */ b("div", {
     className: "postbox",
-    children: [k && /* @__PURE__ */ t("div", {
+    children: [P && /* @__PURE__ */ t("div", {
       className: `mentions ${w === "top" ? "mentions--top" : "mentions--bottom"}`,
       children: /* @__PURE__ */ t("div", {
         className: "mentions__scrollable",
-        children: _ ? /* @__PURE__ */ t("div", {
+        children: A ? /* @__PURE__ */ t("div", {
           className: "mentions__loading",
           children: "Loading..."
-        }) : U.map((f) => /* @__PURE__ */ b("div", {
+        }) : X.map((m) => /* @__PURE__ */ b("div", {
           className: "mentions__account",
-          onClick: () => ee(f),
+          onClick: () => J(m),
           children: [/* @__PURE__ */ t("div", {
             className: "mentions__account__avatar",
             children: /* @__PURE__ */ t(ot, {
-              details: f?.details
+              details: m?.details
             })
           }), /* @__PURE__ */ b("div", {
             className: "mentions__account__name",
             children: [/* @__PURE__ */ t("span", {
-              children: et(f?.details)
+              children: et(m?.details)
             }), /* @__PURE__ */ t("span", {
               className: "badge",
-              children: tt(f?.details)
+              children: tt(m?.details)
             })]
           })]
-        }, f.did))
+        }, m.did))
       })
-    }), o && /* @__PURE__ */ b("div", {
+    }), s && /* @__PURE__ */ b("div", {
       className: "replyto",
       children: [/* @__PURE__ */ b("div", {
         className: "replyto__details",
         children: ["Replying to", " ", /* @__PURE__ */ t("strong", {
-          children: o?.creator_details?.profile?.username || o?.creator_details?.metadata?.ensName || he(o?.creator_details?.did, !0)
-        }), /* @__PURE__ */ t("br", {}), o.content?.body]
-      }), E && /* @__PURE__ */ t("button", {
+          children: s?.creator_details?.profile?.username || s?.creator_details?.metadata?.ensName || pe(s?.creator_details?.did, !0)
+        }), /* @__PURE__ */ t("br", {}), s.content?.body]
+      }), _ && /* @__PURE__ */ t("button", {
         className: "replyto__cancel",
-        onClick: () => E && E(),
+        onClick: () => _ && _(),
         children: "\xD7"
       })]
     }), /* @__PURE__ */ t("div", {
-      ref: y,
+      ref: v,
       className: "postbox__contenteditable",
       contentEditable: !0,
       "data-placeholder": p,
-      onKeyDown: R,
-      onKeyUp: B,
-      onMouseUp: B
-    }), s && /* @__PURE__ */ t(Ae, {
+      onKeyDown: E,
+      onKeyUp: W,
+      onMouseUp: W
+    }), i && /* @__PURE__ */ t(xe, {
       children: /* @__PURE__ */ b("div", {
         className: "postbox__editmenu",
         children: [/* @__PURE__ */ t("button", {
-          onClick: () => v && v(!1),
+          onClick: () => y && y(!1),
           children: "Cancel"
         }), " ", "\u2022 Enter to ", /* @__PURE__ */ t("button", {
-          onClick: j,
+          onClick: F,
           children: "Save"
         })]
       })
-    }), !u && /* @__PURE__ */ t("button", {
-      className: "send",
-      onClick: j,
-      children: "Send"
+    }), !l && /* @__PURE__ */ t("button", {
+      className: "postbox__share",
+      onClick: F,
+      children: "Share"
     })]
   }) : /* @__PURE__ */ t("button", {
     className: "gradient-button",
-    onClick: i,
-    children: "Connect to Ceramic"
+    onClick: a,
+    children: "Connect"
   });
 }, Gt = ({
   children: n,
-  onAction: s
-}) => /* @__PURE__ */ b(Q.Root, {
-  children: [/* @__PURE__ */ t(Q.Trigger, {
+  onAction: i
+}) => /* @__PURE__ */ b(ee.Root, {
+  children: [/* @__PURE__ */ t(ee.Trigger, {
     asChild: !0,
     children: n
-  }), /* @__PURE__ */ t(Q.Portal, {
-    children: /* @__PURE__ */ b(Q.Content, {
+  }), /* @__PURE__ */ t(ee.Portal, {
+    children: /* @__PURE__ */ b(ee.Content, {
       className: "post__popover",
       side: "top",
       sideOffset: 5,
-      children: [/* @__PURE__ */ t(Q.Item, {
+      children: [/* @__PURE__ */ t(ee.Item, {
         className: "edit",
-        onSelect: () => s("edit"),
+        onSelect: () => i("edit"),
         children: "Edit Post"
-      }), /* @__PURE__ */ t(Q.Item, {
+      }), /* @__PURE__ */ t(ee.Item, {
         className: "delete",
-        onSelect: () => s("delete"),
+        onSelect: () => i("delete"),
         children: "Delete Post"
-      }), /* @__PURE__ */ t(Q.Arrow, {
+      }), /* @__PURE__ */ t(ee.Arrow, {
         className: "post__popover__arrow"
       })]
     })
   })]
 }), Kt = ({
   open: n,
-  setOpen: s,
-  confirm: o
-}) => /* @__PURE__ */ t(K.Root, {
+  setOpen: i,
+  confirm: s
+}) => /* @__PURE__ */ t(Q.Root, {
   open: n,
-  onOpenChange: s,
-  children: /* @__PURE__ */ b(K.Portal, {
-    children: [/* @__PURE__ */ t(K.Overlay, {
+  onOpenChange: i,
+  children: /* @__PURE__ */ b(Q.Portal, {
+    children: [/* @__PURE__ */ t(Q.Overlay, {
       className: "post__deleteconfirmation__overlay"
-    }), /* @__PURE__ */ b(K.Content, {
+    }), /* @__PURE__ */ b(Q.Content, {
       className: "post__deleteconfirmation__content",
-      children: [/* @__PURE__ */ t(K.Title, {
+      children: [/* @__PURE__ */ t(Q.Title, {
         className: "post__deleteconfirmation__title",
         children: "Are you sure you want to delete this post?"
-      }), /* @__PURE__ */ t(K.Description, {
+      }), /* @__PURE__ */ t(Q.Description, {
         className: "post__deleteconfirmation__description",
         children: "If you ask for deletion your post might be removed from the Ceramic nodes hosting it."
       }), /* @__PURE__ */ b("div", {
         className: "post__deleteconfirmation__actions",
-        children: [/* @__PURE__ */ t(K.Cancel, {
+        children: [/* @__PURE__ */ t(Q.Cancel, {
           asChild: !0,
           children: /* @__PURE__ */ t("button", {
             className: "cancel",
             children: "Cancel"
           })
-        }), /* @__PURE__ */ t(K.Action, {
+        }), /* @__PURE__ */ t(Q.Action, {
           asChild: !0,
           children: /* @__PURE__ */ t("button", {
             className: "delete",
-            onClick: o,
+            onClick: s,
             children: "Delete"
           })
         })]
@@ -1130,186 +1134,188 @@ const Ae = me.exports.Fragment, t = me.exports.jsx, b = me.exports.jsxs, ze = ()
   })
 }), st = ({
   post: n,
-  replyTo: s = null,
-  onClickReply: o
+  replyTo: i = null,
+  overflowLimit: s = 0,
+  onClickReply: p
 }) => {
-  const u = X(), {
+  const l = te(), {
     orbis: w,
-    profile: E,
-    icons: v,
-    profileUrl: l
-  } = pe(), [c, h] = x(null), [i, y] = x({
+    profile: _,
+    icons: y,
+    profileUrl: c
+  } = ve(), [u, h] = x(null), [a, v] = x({
     ...n
-  }), [O, Z] = x(i.content.body.length >= 280), [$, V] = x(!1), [_, m] = x(0), [k, N] = x(!1), [U, L] = x(null), z = async () => {
-    if (!w || !E)
+  }), [k, Z] = x(s > 0 ? a.content.body.length >= s : !1), [V, I] = x(!1), [A, d] = x(0), [P, j] = x(!1), [X, O] = x(null), B = async () => {
+    if (!w || !_)
       return;
     const {
-      data: R
-    } = await w.getReaction(i.stream_id, E.did);
-    R && h(R.type);
-  }, H = async () => {
+      data: E
+    } = await w.getReaction(a.stream_id, _.did);
+    E && h(E.type);
+  }, q = async () => {
     const {
-      data: R,
-      error: f
+      data: E,
+      error: m
     } = await w.getPost(n.stream_id);
-    f && console.error(f), R && y(R);
-  }, B = async (R) => {
-    if (R === c)
+    m && console.error(m), E && v(E);
+  }, W = async (E) => {
+    if (E === u)
       return;
-    h(R);
-    const f = {
+    h(E);
+    const m = {
       like: "count_likes",
       haha: "count_haha",
       downvote: "count_downvotes"
     }, S = {
-      ...i
+      ...a
     };
-    c && (S[f[c]] -= 1), S[f[R]] += 1, y({
+    u && (S[m[u]] -= 1), S[m[E]] += 1, v({
       ...S
-    }), (await w.react(i.stream_id, R)).status !== 200 && y({
-      ...i
+    }), (await w.react(a.stream_id, E)).status !== 200 && v({
+      ...a
     });
-  }, J = (R) => {
-    R === "edit" ? V(!0) : R === "delete" && N(!0);
-  }, ne = (R) => {
-    y({
-      ...i,
-      content: R,
-      count_commits: i.count_commits + 1
-    }), V(!1);
-  }, ee = async () => {
-    console.log(`deleting ${i.stream_id}`), m(1), setTimeout(() => {
-      m(2);
-    }, 2e3);
-  }, j = Xe(() => {
-    const R = [i.stream_id];
-    return (i.stream_id.startsWith("new_post-") || _ == 1) && R.push("post--pulse"), _ == 2 && R.push("post--deleted"), R.join(" ");
-  }, [i, _]);
+  }, z = (E) => {
+    E === "edit" ? I(!0) : E === "delete" && j(!0);
+  }, G = (E) => {
+    v({
+      ...a,
+      content: E,
+      count_commits: a.count_commits + 1
+    }), I(!1);
+  }, J = async () => {
+    console.log(`deleting ${a.stream_id}`), d(1), await w.deletePost(a.stream_id), d(2);
+  }, F = Xe(() => {
+    const E = [a.stream_id];
+    return (a.stream_id.startsWith("new_post-") || A == 1) && E.push("post--pulse"), A == 2 && E.push("post--deleted"), E.join(" ");
+  }, [a, A]);
   return at(() => {
-    if (i) {
-      const R = Je(i.timestamp);
-      L(R);
+    if (a) {
+      const E = Je(a.timestamp);
+      O(E);
     }
-  }, i ? 6e4 : null), Y(() => {
-    n && H();
-  }, [n]), Y(() => {
-    i && E && z();
-  }, [i, E]), /* @__PURE__ */ b("div", {
-    ref: u,
-    className: `post ${j}`,
+  }, a ? 6e4 : null), U(() => {
+    n && q();
+  }, [n]), U(() => {
+    a && _ && B();
+  }, [a, _]), /* @__PURE__ */ b("div", {
+    ref: l,
+    className: `post ${F}`,
     children: [/* @__PURE__ */ t("div", {
-      className: "post__avatar",
-      children: /* @__PURE__ */ t(ot, {
-        details: i?.creator_details
+      className: "post__side",
+      children: /* @__PURE__ */ t("div", {
+        className: "post__avatar",
+        children: /* @__PURE__ */ t(ot, {
+          details: a?.creator_details
+        })
       })
     }), /* @__PURE__ */ b("div", {
       className: "post__content",
       children: [/* @__PURE__ */ b("div", {
         className: "post__info",
         children: [/* @__PURE__ */ t("a", {
-          href: `${l}${i.creator_details?.did}`,
+          href: `${c}${a.creator_details?.did}`,
           target: "_blank",
           rel: "noreferrer",
-          children: et(i.creator_details)
+          children: et(a.creator_details)
         }), /* @__PURE__ */ t("span", {
           className: "badge",
-          children: tt(i.creator_details)
+          children: tt(a.creator_details)
         }), /* @__PURE__ */ b("span", {
           className: "post__time",
-          children: ["\u2022 ", U || Je(i.timestamp)]
+          children: ["\u2022 ", X || Je(a.timestamp)]
         })]
       }), /* @__PURE__ */ b("div", {
         className: "post__body content",
-        children: [_ == 2 ? "This post is deleted" : $ ? /* @__PURE__ */ t(Pe, {
-          context: i.context,
-          editPost: i,
-          cancelEdit: (R) => V(R),
-          callback: ne
-        }) : /* @__PURE__ */ t(Ae, {
-          children: Yt(i.content, O, 280, l)
-        }), i.count_commits > 1 && _ != 2 && /* @__PURE__ */ t("span", {
+        children: [A == 2 ? "This post is deleted" : V ? /* @__PURE__ */ t(Ne, {
+          context: a.context,
+          editPost: a,
+          cancelEdit: (E) => I(E),
+          callback: G
+        }) : /* @__PURE__ */ t(xe, {
+          children: Yt(a.content, k, s, c)
+        }), a.count_commits > 1 && A != 2 && /* @__PURE__ */ t("span", {
           className: "post__edited",
           children: "(edited)"
         })]
-      }), i?.indexing_metadata?.urlMetadata && /* @__PURE__ */ b("div", {
+      }), a?.indexing_metadata?.urlMetadata && /* @__PURE__ */ b("div", {
         className: "post__metadata",
-        children: [i?.indexing_metadata?.urlMetadata?.image && /* @__PURE__ */ t("a", {
-          href: i?.indexing_metadata?.urlMetadata?.url,
+        children: [a?.indexing_metadata?.urlMetadata?.image && /* @__PURE__ */ t("a", {
+          href: a?.indexing_metadata?.urlMetadata?.url,
           className: "post__metadata__image",
           target: "_blank",
           rel: "noreferrer",
           children: /* @__PURE__ */ t("img", {
-            src: i?.indexing_metadata?.urlMetadata?.image
+            src: a?.indexing_metadata?.urlMetadata?.image
           })
         }), /* @__PURE__ */ b("div", {
           className: "post__metadata__content",
           children: [/* @__PURE__ */ t("small", {
-            children: i?.indexing_metadata?.urlMetadata?.source
+            children: a?.indexing_metadata?.urlMetadata?.source
           }), /* @__PURE__ */ t("h1", {
             children: /* @__PURE__ */ t("a", {
-              href: i?.indexing_metadata?.urlMetadata?.url,
+              href: a?.indexing_metadata?.urlMetadata?.url,
               target: "_blank",
               rel: "noreferrer",
-              children: i?.indexing_metadata?.urlMetadata?.title
+              children: a?.indexing_metadata?.urlMetadata?.title
             })
           }), /* @__PURE__ */ t("p", {
-            children: i?.indexing_metadata?.urlMetadata?.description
+            children: a?.indexing_metadata?.urlMetadata?.description
           })]
         })]
-      }), O && /* @__PURE__ */ t("button", {
+      }), k && /* @__PURE__ */ t("button", {
         className: "gradient-button",
         onClick: () => Z(!1),
         children: "View more"
-      }), _ != 2 && /* @__PURE__ */ b("div", {
+      }), A != 2 && /* @__PURE__ */ b("div", {
         className: "post__menu",
         children: [/* @__PURE__ */ b("div", {
           className: "post__reactions",
           children: [/* @__PURE__ */ t("button", {
-            className: `${s?.stream_id === i.stream_id ? "active" : ""}`,
-            onClick: () => o && o(i),
+            className: `${i?.stream_id === a.stream_id ? "active" : ""}`,
+            onClick: () => p && p(a),
             title: "Reply",
             children: /* @__PURE__ */ t("span", {
               className: "icon",
-              children: v.replyto
+              children: y.replyto
             })
           }), /* @__PURE__ */ b("button", {
-            className: c === "like" ? "active" : "",
-            onClick: () => B("like"),
-            disabled: c === "like",
+            className: u === "like" ? "active" : "",
+            onClick: () => W("like"),
+            disabled: u === "like",
             title: "Like",
             children: [/* @__PURE__ */ t("span", {
               className: "icon",
-              children: c === "like" ? v.likeActive : v.like
+              children: u === "like" ? y.likeActive : y.like
             }), /* @__PURE__ */ t("span", {
-              children: i.count_likes
+              children: a.count_likes
             })]
           }), /* @__PURE__ */ b("button", {
-            className: c === "haha" ? "active" : "",
-            onClick: () => B("haha"),
-            disabled: c === "haha",
+            className: u === "haha" ? "active" : "",
+            onClick: () => W("haha"),
+            disabled: u === "haha",
             title: "HAHA",
             children: [/* @__PURE__ */ t("span", {
               className: "icon",
-              children: c === "haha" ? v.hahaActive : v.haha
+              children: u === "haha" ? y.hahaActive : y.haha
             }), /* @__PURE__ */ t("span", {
-              children: i.count_haha
+              children: a.count_haha
             })]
           }), /* @__PURE__ */ b("button", {
-            className: c === "downvote" ? "active" : "",
-            onClick: () => B("downvote"),
-            disabled: c === "downvote",
+            className: u === "downvote" ? "active" : "",
+            onClick: () => W("downvote"),
+            disabled: u === "downvote",
             title: "Downvote",
             children: [/* @__PURE__ */ t("span", {
               className: "icon",
-              children: c === "downvote" ? v.downvoteActive : v.downvote
+              children: u === "downvote" ? y.downvoteActive : y.downvote
             }), /* @__PURE__ */ t("span", {
-              children: i.count_downvotes
+              children: a.count_downvotes
             })]
           })]
-        }), i.stream_id !== "new_post" && /* @__PURE__ */ b("div", {
+        }), a.stream_id !== "new_post" && /* @__PURE__ */ b("div", {
           className: "post__actions",
-          children: [n?.creator_details?.did === E?.did && /* @__PURE__ */ t(Gt, {
-            onAction: J,
+          children: [n?.creator_details?.did === _?.did && /* @__PURE__ */ t(Gt, {
+            onAction: z,
             children: /* @__PURE__ */ t("button", {
               children: /* @__PURE__ */ t("span", {
                 className: "icon",
@@ -1317,7 +1323,7 @@ const Ae = me.exports.Fragment, t = me.exports.jsx, b = me.exports.jsxs, ze = ()
               })
             })
           }), /* @__PURE__ */ t("a", {
-            href: `https://cerscan.com/mainnet/stream/${i.stream_id}`,
+            href: `https://cerscan.com/mainnet/stream/${a.stream_id}`,
             className: "cerscan-proof",
             target: "_blank",
             rel: "noreferrer",
@@ -1330,147 +1336,150 @@ const Ae = me.exports.Fragment, t = me.exports.jsx, b = me.exports.jsxs, ze = ()
         })]
       })]
     }), /* @__PURE__ */ t(Kt, {
-      open: k,
-      setOpen: N,
-      confirm: ee
+      open: P,
+      setOpen: j,
+      confirm: J
     })]
   });
 }, it = ({
   items: n,
-  replies: s,
-  replyTo: o = null,
+  replies: i,
+  replyTo: s = null,
   onClickReply: p
-}) => /* @__PURE__ */ t(Ae, {
-  children: n.map((u) => /* @__PURE__ */ b("div", {
+}) => /* @__PURE__ */ t(xe, {
+  children: n.map((l) => /* @__PURE__ */ b("div", {
     className: "replies",
     children: [/* @__PURE__ */ t(st, {
-      post: u,
-      replyTo: o,
-      onClickReply: () => p(u)
-    }), s[u.stream_id] !== void 0 && /* @__PURE__ */ t(it, {
-      items: s[u.stream_id],
-      replies: s,
-      replyTo: o,
+      post: l,
+      replyTo: s,
+      onClickReply: () => p(l)
+    }), i[l.stream_id] !== void 0 && /* @__PURE__ */ t(it, {
+      items: i[l.stream_id],
+      replies: i,
+      replyTo: s,
       onClickReply: p
     })]
-  }, u.stream_id))
+  }, l.stream_id))
 }), Jt = ({
   context: n,
-  master: s,
-  innerPostbox: o,
+  master: i,
+  innerPostbox: s,
   replyTo: p,
-  onClickReply: u,
+  onClickReply: l,
   onNewPost: w
 }) => {
   const {
-    orbis: E
-  } = pe(), v = X(null), [l, c] = x([]), [h, i] = x(0), [y, O] = x(!1), Z = Xe(() => l.reduce((m, k) => (m[k.reply_to] = [...m[k.reply_to] || [], k], m), {}), [l]), $ = async () => {
-    if (!E || !n || !s || y)
+    orbis: _
+  } = ve(), y = te(null), [c, u] = x([]), [h, a] = x(0), [v, k] = x(!1), Z = Xe(() => c.reduce((d, P) => (d[P.reply_to] = [...d[P.reply_to] || [], P], d), {}), [c]), V = async () => {
+    if (!_ || !n || !i || v)
       return;
-    O(!0);
+    k(!0);
     const {
-      data: _,
-      error: m
-    } = await E.getPosts({
+      data: A,
+      error: d
+    } = await _.getPosts({
       context: n,
-      master: s.stream_id
+      master: i.stream_id
     }, h);
-    _ && (_.reverse(), c([...l, ..._]), i((k) => k + 1)), m && console.error(m), O(!1);
-  }, V = (_) => {
-    const m = [...l, _];
-    c(m), u(null), _.stream_id.startsWith("new_post-") && setTimeout(() => {
-      const k = v.current?.querySelector(`.${_.stream_id}`);
-      w(k);
+    A && (A.reverse(), u([...c, ...A]), a((P) => P + 1)), d && console.error(d), k(!1);
+  }, I = (A) => {
+    const d = [...c, A];
+    u(d), l(null), A.stream_id.startsWith("new_post-") && setTimeout(() => {
+      const P = y.current?.querySelector(`.${A.stream_id}`);
+      w(P);
     }, 100);
   };
-  return Y(() => {
-    n && s && $();
-  }, [n, s]), /* @__PURE__ */ b("div", {
-    ref: v,
-    children: [Z[s.stream_id] !== void 0 && /* @__PURE__ */ t(it, {
-      items: Z[s.stream_id],
+  return U(() => {
+    n && i && V();
+  }, [n, i]), /* @__PURE__ */ b("div", {
+    ref: y,
+    children: [Z[i.stream_id] !== void 0 && /* @__PURE__ */ t(it, {
+      items: Z[i.stream_id],
       replies: Z,
       replyTo: p,
-      onClickReply: u
+      onClickReply: l
     }), p && /* @__PURE__ */ t("div", {
-      ref: o,
-      children: /* @__PURE__ */ t(Pe, {
+      ref: s,
+      children: /* @__PURE__ */ t(Ne, {
         context: n,
         replyTo: p,
         placeholder: "Reply this comment...",
-        cancelReplyTo: () => u(null),
-        callback: V
+        cancelReplyTo: () => l(null),
+        callback: I
       })
     })]
   });
 }, Qt = ({
-  post: n
+  post: n,
+  overflowLimit: i = 0,
+  showToggleRepliesButton: s = !1
 }) => {
-  const s = X(null), o = X(null), [p, u] = x(!1), [w, E] = x(null), [v, l] = x(null);
-  return Y(() => {
-    if (v !== null && o.current) {
-      const c = o.current?.closest(".comments__posts");
-      if (!c)
+  const p = te(null), l = te(null), [w, _] = x(!1), [y, c] = x(null), [u, h] = x(null);
+  return U(() => {
+    if (u !== null && l.current) {
+      const a = l.current?.closest(".comments__posts");
+      if (!a)
         return;
-      const h = c.offsetHeight / 2;
-      v === "masterPost" && o.current ? setTimeout(() => {
-        c.scrollTo({
-          top: o.current?.offsetTop - c.offsetTop,
+      const v = a.offsetHeight / 2;
+      u === "masterPost" && l.current ? setTimeout(() => {
+        a.scrollTo({
+          top: l.current?.offsetTop - a.offsetTop,
           behavior: "smooth"
         });
-      }, 500) : v === "postbox" && s.current ? setTimeout(() => {
-        c.scrollTo({
-          top: s.current?.offsetTop - h,
+      }, 500) : u === "postbox" && p.current ? setTimeout(() => {
+        a.scrollTo({
+          top: p.current?.offsetTop - v,
           behavior: "smooth"
         });
       }, 500) : setTimeout(() => {
-        const i = v;
-        c.scrollTo({
-          top: i.offsetTop - h,
+        const k = u;
+        a.scrollTo({
+          top: k.offsetTop - v,
           behavior: "smooth"
         });
       }, 500);
     }
     return () => {
       setTimeout(() => {
-        l(null);
+        h(null);
       }, 500);
     };
-  }, [w, p, v]), Y(() => {
-    p || E(null);
-  }, [p]), /* @__PURE__ */ b("div", {
-    ref: o,
+  }, [y, w, u]), U(() => {
+    w || c(null);
+  }, [w]), /* @__PURE__ */ b("div", {
+    ref: l,
     className: "comments__post",
     children: [/* @__PURE__ */ t(st, {
       post: n,
-      replyTo: w,
+      replyTo: y,
+      overflowLimit: i,
       onClickReply: () => {
-        E(n), u(!0), l("postbox");
+        c(n), _(!0), h("postbox");
       }
-    }), n.count_replies !== void 0 && n.count_replies > 0 && /* @__PURE__ */ b("button", {
-      className: `comments__post__toggle-replies ${p ? "opened" : ""}`,
+    }), s && n.count_replies !== void 0 && n.count_replies > 0 && /* @__PURE__ */ b("button", {
+      className: `comments__post__toggle-replies ${w ? "opened" : ""}`,
       onClick: () => {
-        l(p ? null : "masterPost"), u((c) => !c);
+        h(w ? null : "masterPost"), _((a) => !a);
       },
-      children: [p ? "Hide" : "Show", " replies"]
-    }), p && /* @__PURE__ */ t(Jt, {
+      children: [w ? "Hide" : "Show", " replies"]
+    }), (!s || w) && /* @__PURE__ */ t(Jt, {
       context: n.context,
       master: n,
-      replyTo: w,
-      innerPostbox: s,
-      onClickReply: (c) => {
-        E(c), l("postbox");
+      replyTo: y,
+      innerPostbox: p,
+      onClickReply: (a) => {
+        c(a), h("postbox");
       },
-      onNewPost: (c) => l(c)
+      onNewPost: (a) => h(a)
     })]
   });
 }, Xt = ({
   onClick: n,
-  text: s = "Load older posts"
+  text: i = "Load older posts"
 }) => /* @__PURE__ */ t("button", {
   className: "gradient-button",
   onClick: n,
-  children: s
+  children: i
 }), er = () => /* @__PURE__ */ t("div", {
   className: "loading",
   children: "Loading..."
@@ -1523,73 +1532,78 @@ const Ae = me.exports.Fragment, t = me.exports.jsx, b = me.exports.jsxs, ze = ()
   })
 }), cr = ({
   context: n,
-  algorithm: s = "all-context-master-posts",
-  postboxPlaceholder: o = "Share your comment here"
+  algorithm: i = "all-context-master-posts",
+  postboxPlaceholder: s = "Share your comment here",
+  overflowLimit: p = 0,
+  showToggleRepliesButton: l = !1
 }) => {
-  const p = X(), {
-    orbis: u,
-    showPoweredByOrbis: w
-  } = pe(), [E, v] = x(0), [l, c] = x([]), [h, i] = x(!1), [y, O] = x(!1), [Z, $] = x(0), [V, _] = x(!1), m = async (N) => {
-    if (!u || !n || h)
+  const w = te(), {
+    orbis: _,
+    showPoweredByOrbis: y
+  } = ve(), [c, u] = x(0), [h, a] = x([]), [v, k] = x(!1), [Z, V] = x(!1), [I, A] = x(0), [d, P] = x(!1), j = async (O) => {
+    if (!_ || !n || v)
       return;
-    const U = N?.reset ? [] : [...l];
-    N?.polling || (_(!0), i(!0));
+    const B = O?.reset ? [] : [...h];
+    O?.polling || (P(!0), k(!0));
     const {
-      data: L,
-      error: z
-    } = await u.getPosts({
+      data: q,
+      error: W
+    } = await _.getPosts({
       context: n,
-      algorithm: s
-    }, N?.polling || N?.reset ? 0 : E);
-    if (L)
-      if (N?.polling) {
-        const H = L.filter((B) => !U.some((J) => B.stream_id === J.stream_id));
-        H.length > 0 && (c([...H, ...U]), $((B) => B + H.length));
+      algorithm: i
+    }, O?.polling || O?.reset ? 0 : c);
+    if (q)
+      if (O?.polling) {
+        const z = q.filter((G) => !B.some((J) => G.stream_id === J.stream_id));
+        z.length > 0 && (a([...z, ...B]), A((G) => G + z.length));
       } else {
-        c([...U, ...L]);
-        const H = N?.reset ? 1 : E + 1;
-        v(H), O(L.length >= 50), _(!1), i(!1);
+        a([...B, ...q]);
+        const z = O?.reset ? 1 : c + 1;
+        u(z), V(q.length >= 50), P(!1), k(!1);
       }
-    z && console.error(z);
-  }, k = (N) => {
-    const U = [N, ...l];
-    c(U);
+    W && console.error(W);
+  }, X = (O) => {
+    const B = [O, ...h];
+    a(B);
   };
   return at(() => {
-    m({
+    j({
       polling: !0
     });
-  }, V ? null : 1e4), Y(() => {
-    n && (v(0), setTimeout(() => {
-      m({
+  }, d ? null : 1e4), U(() => {
+    n && (u(0), setTimeout(() => {
+      j({
         reset: !0
       });
     }, 100));
   }, [n]), /* @__PURE__ */ b("div", {
-    ref: p,
+    ref: w,
     className: "comments",
-    children: [w && /* @__PURE__ */ t(tr, {}), /* @__PURE__ */ t("div", {
+    children: [/* @__PURE__ */ t("div", {
       className: "comments__postbox",
-      children: /* @__PURE__ */ t(Pe, {
+      children: /* @__PURE__ */ t(Ne, {
         context: n,
-        placeholder: o,
+        placeholder: s,
         popoverPosition: "bottom",
-        callback: k
+        callback: X,
+        enterToShare: !1
       })
     }), /* @__PURE__ */ b("div", {
       className: "comments__posts",
-      children: [l.map((N) => /* @__PURE__ */ t(Qt, {
-        post: N
-      }, N.stream_id)), y && !h && /* @__PURE__ */ t(Xt, {
-        onClick: () => m()
-      }), h && /* @__PURE__ */ t(er, {}), Z > 0 && /* @__PURE__ */ b("div", {
-        children: [Z, " New ", Z > 1 ? "Messages" : "Message"]
+      children: [h.map((O) => /* @__PURE__ */ t(Qt, {
+        post: O,
+        overflowLimit: p,
+        showToggleRepliesButton: l
+      }, O.stream_id)), Z && !v && /* @__PURE__ */ t(Xt, {
+        onClick: () => j()
+      }), v && /* @__PURE__ */ t(er, {}), I > 0 && /* @__PURE__ */ b("div", {
+        children: [I, " New ", I > 1 ? "Messages" : "Message"]
       })]
-    })]
+    }), y && /* @__PURE__ */ t(tr, {})]
   });
 };
 export {
   cr as Comments,
   ir as OrbisProvider,
-  pe as useOrbis
+  ve as useOrbis
 };

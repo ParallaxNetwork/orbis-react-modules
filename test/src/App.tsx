@@ -70,7 +70,7 @@ const App = () => {
             onChange={(e) => setContext(e.target.value)}
           />
         </div>
-        <div className="my-4 h-[84vh] rounded-md border-2 border-dashed border-neutral-700 dark:border-neutral-700">
+        <div className="my-4 h-[84vh] rounded-md py-3 border-2 border-dashed border-neutral-700 dark:border-neutral-700">
           <Comments
             context={context}
             algorithm="all-context-master-posts"

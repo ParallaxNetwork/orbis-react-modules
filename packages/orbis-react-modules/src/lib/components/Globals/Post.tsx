@@ -21,20 +21,20 @@ type Reactions = Pick<
 const Post = ({
   post,
   replyTo = null,
+  overflowLimit = 0,
   onClickReply
 }: {
   post: IOrbisPost
   replyTo: IOrbisPost | null
+  overflowLimit?: number
   onClickReply?: (value: IOrbisPost) => void
 }) => {
-  const overflowCount = 280
-
   const postItem = useRef<any>()
   const { orbis, profile, icons, profileUrl } = useOrbis()
   const [reacted, setReacted] = useState<string | null>(null)
   const [postClone, setPostClone] = useState<IOrbisPost>({ ...post })
   const [hideOverflow, setHideOverflow] = useState<boolean>(
-    postClone.content.body.length >= overflowCount
+    overflowLimit > 0 ? postClone.content.body.length >= overflowLimit : false
   )
   const [isEditing, setIsEditing] = useState<boolean>(false)
   const [isDeleted, setIsDeleted] = useState<number>(0)
@@ -136,8 +136,10 @@ const Post = ({
 
   return (
     <div ref={postItem} className={`post ${additionalClasses}`}>
-      <div className="post__avatar">
-        <Avatar details={postClone?.creator_details} />
+      <div className="post__side">
+        <div className="post__avatar">
+          <Avatar details={postClone?.creator_details} />
+        </div>
       </div>
       <div className="post__content">
         <div className="post__info">
@@ -170,7 +172,7 @@ const Post = ({
               {formatMessage(
                 postClone.content,
                 hideOverflow,
-                overflowCount,
+                overflowLimit,
                 profileUrl
               )}
             </>

@@ -1,13 +1,12 @@
 @layer components {
   .postbox {
-    @apply relative z-10;
+    @apply relative z-10 flex flex-col items-end;
 
     &__contenteditable {
-      @apply
-      relative
+      @apply relative
       py-2
       px-3
-      grow
+      w-full
       max-h-[7rem]
       overflow-auto
       break-words
@@ -34,6 +33,15 @@
 
       button {
         @apply text-[var(--orbis-active-color)];
+      }
+    }
+
+    &__share {
+      @apply mt-1 py-1.5 px-6 text-white rounded-md;
+      background-image: var(--orbis-gradient-button);
+
+      &:hover {
+        background-image: var(--orbis-gradient-button-hover);
       }
     }
   }

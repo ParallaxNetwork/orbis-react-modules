@@ -15,7 +15,7 @@ const Postbox = ({
   editPost,
   replyTo,
   placeholder = 'Share your post here...',
-  enterToSend = true,
+  enterToShare = true,
   popoverPosition = 'top',
   cancelReplyTo,
   cancelEdit,
@@ -25,7 +25,7 @@ const Postbox = ({
   editPost?: IOrbisPost
   replyTo?: IOrbisPost | null
   placeholder?: string
-  enterToSend?: boolean
+  enterToShare?: boolean
   popoverPosition?: 'top' | 'bottom'
   cancelReplyTo?: () => void | undefined
   cancelEdit?: (state: boolean) => void
@@ -142,12 +142,12 @@ const Postbox = ({
 
       await orbis.editPost(editPost.stream_id, newContent)
     } else {
-      const content = {
+      const content: IOrbisPostContent = {
         body,
         context,
-        master: replyTo ? replyTo.master || replyTo.stream_id : undefined,
-        reply_to: replyTo ? replyTo.stream_id : undefined,
-        mentions: _mentions || undefined
+        master: replyTo ? replyTo.master || replyTo.stream_id : null,
+        reply_to: replyTo ? replyTo.stream_id : null,
+        mentions: _mentions || []
       }
 
       const timestamp = Math.floor(Date.now() / 1000)
@@ -192,7 +192,7 @@ const Postbox = ({
   const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
     if (!e.key) return
 
-    if (enterToSend && e.key === 'Enter' && !e.shiftKey) {
+    if (enterToShare && e.key === 'Enter' && !e.shiftKey) {
       // Don't generate a new line
       e.preventDefault()
       share()
@@ -288,7 +288,7 @@ const Postbox = ({
   if (!profile) {
     return (
       <button className="gradient-button" onClick={connectOrbis}>
-        Connect to Ceramic
+        Connect
       </button>
     )
   }
@@ -369,9 +369,9 @@ const Postbox = ({
         </>
       )}
 
-      {!enterToSend && (
-        <button className="send" onClick={share}>
-          Send
+      {!enterToShare && (
+        <button className="postbox__share" onClick={share}>
+          Share
         </button>
       )}
     </div>

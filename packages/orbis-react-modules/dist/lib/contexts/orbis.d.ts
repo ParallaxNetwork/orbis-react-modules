@@ -7,6 +7,7 @@ interface IOrbisContext {
     profileUrl: string;
     hasLit: boolean;
     showPoweredByOrbis: boolean;
+    showCerscanProof: boolean;
     setProvider: (provider: any) => void;
     connectOrbis: () => Promise<void>;
     connectLit: () => Promise<{
@@ -28,12 +29,13 @@ interface IOrbisIcons {
     replytoActive?: ReactElement;
     comment?: ReactElement;
 }
-declare const OrbisProvider: ({ children, customIcons, options, profileUrl, showPoweredByOrbis }: {
+declare const OrbisProvider: ({ children, customIcons, options, profileUrl, showPoweredByOrbis, showCerscanProof }: {
     children?: ReactNode;
     customIcons?: IOrbisIcons | null | undefined;
     options?: IOrbisConstructor | undefined;
     profileUrl?: string | undefined;
     showPoweredByOrbis?: boolean | undefined;
+    showCerscanProof?: boolean | undefined;
 }) => ReactElement;
 declare const useOrbis: () => IOrbisContext;
 export { OrbisProvider, useOrbis };

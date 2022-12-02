@@ -68,15 +68,15 @@ export const highlightMentions = (content: IOrbisPostContent) => {
 export const formatMessage = (
   content: IOrbisPostContent,
   hideOverflow = false,
-  overflowCount = 280,
+  overflowLimit = 0,
   profileUrl = 'https://app.orbis.club/profile/'
 ) => {
   if (!content || !content.body) return null
 
   let _body: any = content.body
 
-  if (hideOverflow && _body.length > overflowCount) {
-    _body = _body.substring(0, overflowCount)
+  if (overflowLimit > 0 && hideOverflow && _body.length > overflowLimit) {
+    _body = _body.substring(0, overflowLimit)
     return _body + '...'
   }
 

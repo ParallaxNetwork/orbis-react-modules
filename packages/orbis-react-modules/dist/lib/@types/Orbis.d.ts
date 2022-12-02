@@ -91,7 +91,7 @@ declare interface IOrbis {
   editPost: (
     stream_id: string,
     content: IOrbisPostContent,
-    encryptionRules: IOrbisEncryptionRules
+    encryptionRules?: IOrbisEncryptionRules
   ) => Promise<{
     status: number
     result: string
@@ -449,15 +449,15 @@ interface IOrbisPostMention {
 
 interface IOrbisPostContent {
   body: string
-  title?: string
-  context?: string
-  master?: string
+  title?: string | null
+  context?: string | null
+  master?: string | null
   mentions?: IOrbisPostMention[]
-  reply_to?: string
-  type?: string
+  reply_to?: string | null
+  type?: string | null
   tags?: {
-    slug: string
-    title: string
+    slug?: string | null
+    title?: string | null
   }[]
   data?: object
   encryptionRules?: IOrbisEncryptionRules | null

@@ -24,6 +24,7 @@ interface IOrbisContext {
   profileUrl: string
   hasLit: boolean
   showPoweredByOrbis: boolean
+  showCerscanProof: boolean
   setProvider: (provider: any) => void
   connectOrbis: () => Promise<void>
   connectLit: () => Promise<{
@@ -66,13 +67,15 @@ const OrbisProvider = ({
   customIcons = null,
   options = {},
   profileUrl = 'https://app.orbis.club/profile/',
-  showPoweredByOrbis = false
+  showPoweredByOrbis = false,
+  showCerscanProof=false
 }: {
   children?: ReactNode
   customIcons?: IOrbisIcons | null
   options?: IOrbisConstructor
   profileUrl?: string
   showPoweredByOrbis?: boolean
+  showCerscanProof?: boolean
 }): ReactElement => {
   const orbis: IOrbis = new Orbis(options)
   const icons: IOrbisIcons = customIcons || defaultIcons
@@ -136,6 +139,7 @@ const OrbisProvider = ({
         profileUrl,
         hasLit,
         showPoweredByOrbis,
+        showCerscanProof,
         setProvider,
         connectOrbis,
         connectLit,

@@ -23,8 +23,12 @@
       }
     }
 
+    &__side {
+      @apply w-8 shrink-0;
+    }
+
     &__avatar {
-      @apply w-8 h-8 shrink-0;
+      @apply w-full aspect-square;
     }
 
     &__content {

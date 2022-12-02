@@ -3,9 +3,13 @@ import Post from '../Globals/Post'
 import Replies from '../Globals/Replies'
 
 const CommentPost = ({
-  post
+  post,
+  overflowLimit = 0,
+  showToggleRepliesButton = false
 }: {
   post: IOrbisPost
+  overflowLimit?: number
+  showToggleRepliesButton?: boolean
 }) => {
   const innerPostbox = useRef<any>(null)
   const masterPost = useRef<any>(null)
@@ -65,13 +69,16 @@ const CommentPost = ({
       <Post
         post={post}
         replyTo={replyTo}
+        overflowLimit={overflowLimit}
         onClickReply={() => {
           setReplyTo(post)
           setShowReplies(true)
           setScrollToEl('postbox')
         }}
       />
-      {post.count_replies !== undefined && post.count_replies > 0 && (
+      {showToggleRepliesButton &&
+        post.count_replies !== undefined &&
+        post.count_replies > 0 && (
         <button
           className={`comments__post__toggle-replies ${
             showReplies ? 'opened' : ''
@@ -84,7 +91,7 @@ const CommentPost = ({
           {showReplies ? 'Hide' : 'Show'} replies
         </button>
       )}
-      {showReplies && (
+      {(!showToggleRepliesButton || showReplies) && (
         <Replies
           context={post.context}
           master={post}

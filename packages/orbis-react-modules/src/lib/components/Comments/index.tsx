@@ -10,11 +10,15 @@ import PoweredByOrbis from '../Globals/PoweredByOrbis'
 const Comments = ({
   context,
   algorithm = 'all-context-master-posts',
-  postboxPlaceholder = 'Share your comment here'
+  postboxPlaceholder = 'Share your comment here',
+  overflowLimit = 0,
+  showToggleRepliesButton = false
 }: {
   context: string
   algorithm?: keyof typeof IOrbisGetPostsAlgorithm | null
   postboxPlaceholder?: string
+  overflowLimit?: number
+  showToggleRepliesButton?: boolean
 }) => {
   const comments = useRef<any>()
   const { orbis, showPoweredByOrbis } = useOrbis()
@@ -91,18 +95,23 @@ const Comments = ({
 
   return (
     <div ref={comments} className="comments">
-      {showPoweredByOrbis && <PoweredByOrbis />}
       <div className="comments__postbox">
         <Postbox
           context={context}
           placeholder={postboxPlaceholder}
           popoverPosition="bottom"
           callback={callback}
+          enterToShare={false}
         />
       </div>
       <div className="comments__posts">
         {posts.map((post) => (
-          <CommentPost key={post.stream_id} post={post} />
+          <CommentPost
+            key={post.stream_id}
+            post={post}
+            overflowLimit={overflowLimit}
+            showToggleRepliesButton={showToggleRepliesButton}
+          />
         ))}
         {hasMore && !isLoading && <Loadmore onClick={() => getComments()} />}
         {isLoading && <Loading />}
@@ -112,6 +121,7 @@ const Comments = ({
           </div>
         )}
       </div>
+      {showPoweredByOrbis && <PoweredByOrbis />}
     </div>
   )
 }
